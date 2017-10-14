@@ -7,11 +7,12 @@ import org.jfree.ui.ApplicationFrame;
 import javax.swing.*;
 import java.awt.*;
 
-import java.util.*;
-
 public class HistogramDisplay extends ApplicationFrame {
-    public HistogramDisplay() {
+    Histogram histogram;
+
+    public HistogramDisplay(Histogram histogram) {
         super("HISTOGRAMA");
+        this.histogram = histogram;
         this.setContentPane(createPanel());
         this.pack();
     }
@@ -38,10 +39,7 @@ public class HistogramDisplay extends ApplicationFrame {
     }
     private DefaultCategoryDataset createDataset(){
         DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
-        dataSet.addValue(7,"","gmail");
-        dataSet.addValue(3,"","ulpgc.es");
-        dataSet.addValue(5,"","ull.es");
-        dataSet.addValue(1,"","hotmail.com");
+        for (Object value : histogram.keySet())  dataSet.addValue(histogram.get(value),"",(String) value);
         return dataSet;
     }
 
