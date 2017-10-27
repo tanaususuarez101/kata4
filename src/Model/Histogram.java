@@ -10,7 +10,7 @@ public class Histogram <T>{
     public int get(Object key) {
         return data.get(key);
     }
-    public Set keySet(){
+    public Set<T> keySet(){
         return data.keySet();
     }
     public void Increment(T key){
