@@ -1,3 +1,7 @@
+package Controller;
+import Model.*;
+import View.*;
+
 public class main {
     public static void main(String[] args) {
         Histogram histogram = new Histogram();

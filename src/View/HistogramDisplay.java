@@ -1,3 +1,6 @@
+package View;
+
+import Model.*;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -6,6 +9,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
 import javax.swing.*;
 import java.awt.*;
+
 
 public class HistogramDisplay extends ApplicationFrame {
     Histogram histogram;
