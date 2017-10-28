@@ -13,7 +13,7 @@ public class MailListReader{
             reader.close();
         }
         catch(FileNotFoundException a){System.out.println("Fichero no encontrado "+a);}
-        catch (IOException a){System.out.println("Error entrada y salida");}
+        catch (IOException a){System.out.println("Error entrada y salida "+a);}
         return mailList;
     }
 }
